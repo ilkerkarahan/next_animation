@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 800px;
+    max-width: 100%;
+}
+
+.emptyProgress {
+    background-color: gray;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.6s ease-in-out;
+}
+
+
+.fullProgress {
+    background-color: rgb(228, 58, 58);
+    height: 5px;
+    width: 0%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.6s ease-in-out;
+}
+
+.circleContainer {
+    position: relative;
+}
+
+.circle {
+    background-color: #f8f9fa;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid gray;
+    transition: 0.6s ease-in-out;
+}
+
+.card {
+    position: absolute;
+    width: 160px;
+    height: 80px;
+    border: 2px solid rgb(228, 58, 58);
+    border-radius: 10px;
+    top: -100px;
+    left: -60px;
+    font-size: 10px;
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+}
+
+.card h3 {
+    margin: 2px;
+}
+
+.circle.active {
+    border-color: rgb(228, 58, 58);
+}
+
+.card.active1 {
+    opacity: 1;
+}
+
+.fa-solid {
+    font-size: 30px;
+    color: rgb(207, 33, 33);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.btn {
+    background-color: rgb(202, 50, 50);
+    color: rgb(250, 249, 249);
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 16px;
+    margin: 0 70px;
+}
+
+.btn:disabled {
+    background-color: #58595a;
+}
+
+.btn:active:not(:disabled) {
+    transform: scale(0.9);
+}
